@@ -4,11 +4,11 @@
   "description": "the backend/server code for soundwave - a music sharing chat app",
   "main": "build/server",
   "scripts": {
-		"prestart": "tsc -p ./",
-		"start": "node build/server",
-		"lint": "eslint  ./src/**/*.ts",
-		"dev": "nodemon -L"
-	},
+    "prestart": "tsc -p ./",
+    "start": "node build/server",
+    "lint": "eslint  ./src/**/*.ts",
+    "dev": "nodemon -L"
+  },
   "keywords": [
     "graphql",
     "typescript",
