@@ -1,0 +1,26 @@
+{
+  "name": "soundwave",
+  "version": "1.0.0",
+  "description": "a music sharing chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "husky": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danBamikiya/soundwave.git"
+  },
+  "author": "Dan Bamikiya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danBamikiya/soundwave/issues"
+  },
+  "homepage": "https://github.com/danBamikiya/soundwave#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^5.1.3",
+    "prettier": "^2.2.1"
+  }
+}
