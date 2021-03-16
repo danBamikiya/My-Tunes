@@ -7,7 +7,6 @@
     "prestart": "tsc -p ./",
     "start": "node build/server",
     "lint": "eslint ./src/**/*.ts",
-    "format": "prettier --write ./src && git add -i",
     "dev": "nodemon -L"
   },
   "keywords": [
