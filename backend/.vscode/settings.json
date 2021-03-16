@@ -1,5 +1,0 @@
-{
-    "prettier.prettierPath": "./node_modules/prettier",
-    "prettier.configPath": ".prettierrc.json",
-    "eslint.workingDirectories": [ "./" ]
-}
