@@ -1,4 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "hello there!"
+cd frontend
+echo "hello there from frontend!"
+cd ../
+echo "hello there from root!"
