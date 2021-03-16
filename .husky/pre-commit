@@ -1,7 +1,13 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-cd frontend
-echo "hello there from frontend!"
-cd ../
-echo "hello there from root!"
+cd backend
+npm run lint
+npm run format
+echo "backend done and done!"
+# cd ../frontend
+# npm run lint
+# npm run format
+# echo "frontend done and done!"
+# cd ../
+echo "root 😎"
