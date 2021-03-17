@@ -1,9 +1,10 @@
 {
   "name": "soundwave",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
+    "@apollo/client": "^3.3.12",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
@@ -12,6 +13,7 @@
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
     "axios": "^0.21.1",
+    "graphql": "^15.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -50,6 +52,7 @@
     "@storybook/addon-links": "^6.1.21",
     "@storybook/node-logger": "^6.1.21",
     "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.1.21"
+    "@storybook/react": "^6.1.21",
+    "stylelint-config-prettier": "^8.0.2"
   }
 }
