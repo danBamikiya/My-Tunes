@@ -1,13 +1,15 @@
 {
     "compilerOptions": {
-      "target": "ES6",
+      "target": "es5",
       "module": "commonjs",
-      "rootDir": "./src/",
+      "rootDir": "./src",
       "outDir": "./build",
       "esModuleInterop": true,
       "moduleResolution": "node",
-      "strict": true
+      "baseUrl": "./src",
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
     },
-    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2015"],
     "compileOnSave": true
   }
