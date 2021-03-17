@@ -4,10 +4,10 @@
 cd backend
 npm run lint
 npm run format
-echo "✅   backend done and done!"
+echo "✅  Backend done and done!"
 # cd ../frontend
 # npm run lint
 # npm run format
-# echo "✅   frontend done and done!"
+# echo "✅  Frontend done and done!"
 cd ../
 echo "root 😎"
