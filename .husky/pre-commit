@@ -10,4 +10,4 @@ echo "✅  Backend done and done!"
 # npm run format
 # echo "✅  Frontend done and done!"
 cd ../
-echo "Root 😎"
+echo "root 😎"
