@@ -9,4 +9,4 @@ npm run lint
 echo "✅  Frontend done and done!"
 cd ../
 npm run format
-printf "\n⭐  root 😎\n"
+printf "\n🌟  root 😎\n\n"
