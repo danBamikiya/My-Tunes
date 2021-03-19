@@ -1,6 +1,7 @@
 {
-  "name": "soundwave",
+  "name": "soundwave-frontend",
   "version": "1.0.0",
+  "description": "the frontend/client code for soundwave - a music sharing chat app",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
@@ -26,7 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint ./src/**/*"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +55,13 @@
     "@storybook/node-logger": "^6.1.21",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.1.21",
-    "stylelint-config-prettier": "^8.0.2"
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0"
   }
 }
