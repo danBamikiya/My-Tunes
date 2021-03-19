@@ -41,5 +41,3 @@ const server = new GraphQLServer({ typeDefs, resolvers })
 server.start(({ port }) => {
   console.log(`Server started on http://localhost:${port}`)
 })
-
-// testing
