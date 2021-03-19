@@ -46,7 +46,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Messages user="Jack" />
+        <Messages user="Damian" />
       </div>
     </ApolloProvider>
   )
