@@ -1,24 +1,55 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql
+} from '@apollo/client'
 
-function App() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
-	);
+const client = new ApolloClient({
+  uri: 'http://localhost/4040',
+  cache: new InMemoryCache()
+})
+
+interface User {
+  user: string
 }
 
-export default App;
+interface Messages extends User {
+  id: number
+  content: string
+}
+
+const GET_MESSAGES = gql`
+  query {
+    messages {
+      id
+      content
+      user
+    }
+  }
+`
+
+function App() {
+  const Messages = ({ user }: User) => {
+    const { loading, data } = useQuery<Messages>(GET_MESSAGES)
+    return (
+      <div>
+        <h1>Messages</h1>
+        {loading ? <p>Loading ...</p> : <h3>{JSON.stringify(data)}</h3>}
+      </div>
+    )
+  }
+
+  return (
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Messages user="Jack" />
+      </div>
+    </ApolloProvider>
+  )
+}
+
+export default App
