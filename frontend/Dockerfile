@@ -2,5 +2,5 @@ FROM node:15.10.0
 WORKDIR /app
 COPY [".", "./"]
 RUN npm i
-EXPOSE 3000
+EXPOSE 4050
 CMD ["npm", "start"]
