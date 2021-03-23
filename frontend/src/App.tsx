@@ -22,6 +22,10 @@ interface Messages extends User {
   content: string
 }
 
+interface MessagesData {
+  messages: Messages[]
+}
+
 const GET_MESSAGES = gql`
   query {
     messages {
@@ -33,12 +37,26 @@ const GET_MESSAGES = gql`
 `
 
 function App() {
+  const userMessages = ({ id, user: messageUser, content }: Messages) => {
+    return <>{content}</>
+  }
+
   const Messages = ({ user }: User) => {
-    const { loading, data } = useQuery<Messages>(GET_MESSAGES)
+    const { loading, data } = useQuery<MessagesData>(GET_MESSAGES)
     return (
       <div>
         <h1>Messages</h1>
-        {loading ? <p>Loading ...</p> : <h3>{JSON.stringify(data)}</h3>}
+        {loading ? (
+          <p>Loading ...</p>
+        ) : (
+          <h3>
+            {data?.messages.map(userMessages) || (
+              <>
+                <p>No message</p>
+              </>
+            )}
+          </h3>
+        )}
       </div>
     )
   }
