@@ -42,44 +42,40 @@ const GET_MESSAGES = gql`
 `
 
 function App() {
-  const ChatBubble: React.FC<ChatBubbleProps> = ({ sender, content }) => {
-    const mode = sender
-      ? ['bg-blue', 'flex-end']
-      : ['bg-blue-dark', 'flex-start']
-    const classes = mode.join(' ')
-
-    return (
-      <div className={`flex mb-4 ${classes}`}>
-        <div
-          className={
-            'h-11 w-11 mr-3 rounded-3xl text-center text-base border-2 border-solid border-blue'
-          }
-        >
-          {sender.slice(0, 2).toUpperCase()}
-        </div>
-        <div
-          style={{ maxWidth: '60%' }}
-          className={'p-4 text-primary rounded-lg'}
-        >
-          {content}
-        </div>
-      </div>
-    )
-  }
-
-  const userMessages = ({ id, user: messageUser, content }: Messages) => (
-    <ChatBubble key={id} content={content} sender={messageUser} />
-  )
-
   const Messages = ({ user }: User) => {
     const { loading, data } = useQuery<MessagesData>(GET_MESSAGES)
-    // if (loading) {
-    //   return <p>Loading ...</p>
-    // } else if (!data) {
-    //   return <p>No message</p>
-    // } else {
-    //   return userMessages(data.messages[0])
-    // }
+
+    const ChatBubble: React.FC<ChatBubbleProps> = ({ sender, content }) => {
+      const classes =
+        sender === user
+          ? { bg: 'bg-blue', flex: 'justify-end' }
+          : { bg: 'bg-blue-dark', flex: 'justify-start' }
+
+      return (
+        <div className={`flex mb-4 ${classes.flex}`}>
+          {sender !== user && (
+            <div
+              style={{ borderWidth: '1px' }}
+              className={
+                'h-11 w-11 p-1.5 mr-3 rounded-3xl text-center text-base border-solid border-blue-dark'
+              }
+            >
+              {user.slice(0, 2).toUpperCase()}
+            </div>
+          )}
+          <div
+            style={{ maxWidth: '60%' }}
+            className={`p-4 text-primary rounded-lg ${classes.bg}`}
+          >
+            {content}
+          </div>
+        </div>
+      )
+    }
+
+    const userMessages = ({ id, user: messageUser, content }: Messages) => (
+      <ChatBubble key={id} content={content} sender={messageUser} />
+    )
 
     return (
       <div>
