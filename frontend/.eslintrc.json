@@ -21,6 +21,7 @@
   "rules": {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "warn",
+    "react/prop-types": "off",
     "semi": ["warn", "never"],
     "object-curly-spacing": ["warn", "always"],
     "space-before-function-paren": [
@@ -31,6 +32,7 @@
         "asyncArrow": "always"
       }
     ],
-    "quotes": ["warn", "single"]
+    "quotes": ["warn", "single"],
+    "jsx-quotes": ["warn", "prefer-single"]
   }
 }
