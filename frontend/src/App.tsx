@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC, useState } from 'react'
 import './App.css'
 import {
   ApolloClient,
@@ -30,6 +30,10 @@ interface ChatBubbleProps {
   sender: string
   content: string
 }
+// interface ChatInput {
+//   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+//   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void
+// }
 
 const GET_MESSAGES = gql`
   query {
@@ -42,10 +46,15 @@ const GET_MESSAGES = gql`
 `
 
 function App() {
+  const [state, setState] = useState({
+    user: '',
+    content: ''
+  })
+
   const Messages = ({ user }: User) => {
     const { loading, data } = useQuery<MessagesData>(GET_MESSAGES)
 
-    const ChatBubble: React.FC<ChatBubbleProps> = ({ sender, content }) => {
+    const ChatBubble: FC<ChatBubbleProps> = ({ sender, content }) => {
       const classes =
         sender === user
           ? { bg: 'bg-blue', flex: 'justify-end' }
@@ -94,10 +103,73 @@ function App() {
     )
   }
 
+  const ChatInput = () => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      console.log(event.target.value)
+      setState({ ...state, user: event.target.value })
+      console.log(state)
+    }
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
+      console.log(state)
+      setState({ ...state, user: '', content: '' })
+    }
+
+    return (
+      <form
+        onSubmit={handleSubmit}
+        className='flex justify-between items-center chat-input mt-auto rounded-lg p-3.5 bg-blue-darkest'
+      >
+        <input
+          type='text'
+          // value={state.user}
+          placeholder='Change User'
+          style={{ padding: '0 6px 0 12px' }}
+          className='h-8 border-none bg-blue-darker text-primary rounded'
+          onChange={handleChange}
+        />
+        <div
+          style={{ borderWidth: '1px', padding: '0 6px 0 12px' }}
+          className={
+            'border-solid border-blue-light rounded text-sm flex flex-1 overflow-hidden justify-between mx-2 bg-blue-darkest'
+          }
+        >
+          <input
+            type='text'
+            className='border-none outline-none h-8 flex-1 mr-1 bg-blue-darkest text-primary'
+            placeholder='Enter your message here'
+            onChange={event =>
+              setState({
+                ...state,
+                content: event.target.value
+              })
+            }
+          />
+          <button
+            style={{ color: '#ffca3e' }}
+            className='border-none bg-transparent p-0 flex items-center justify-center mx-1'
+          ></button>
+        </div>
+        <button
+          style={{
+            padding: '0 32px 0 10px',
+            backgroundPosition: 'center right 8px',
+            backgroundSize: '14px'
+          }}
+          className='h-8 text-primary bg-blue border-none rounded text-xs bg-no-repeat leading-4 chat-send-button'
+        >
+          Send
+        </button>
+      </form>
+    )
+  }
+
   return (
     <ApolloProvider client={client}>
       <div className='container mx-auto p-6'>
-        <Messages user='Ajoudi' />
+        <Messages user='Damian' />
+        <ChatInput />
       </div>
     </ApolloProvider>
   )
