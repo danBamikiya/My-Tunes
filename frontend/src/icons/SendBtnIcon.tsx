@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function SendIcon() {
+export const SendIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
