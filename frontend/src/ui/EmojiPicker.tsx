@@ -1,7 +1,7 @@
 import React from 'react'
 import { EmojiPickerIcon } from '../icons/EmojiPickerIcon'
 
-export function EmojiPicker() {
+export const EmojiPicker = () => {
   return (
     <button
       style={{ color: '#ffca3e' }}
