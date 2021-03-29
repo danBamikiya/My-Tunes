@@ -2,7 +2,7 @@ import React from 'react'
 import { ChatInputField } from './ChatInputField'
 import { EmojiPicker } from './EmojiPicker'
 
-export function ChatInputBar() {
+export const ChatInputBar = () => {
   return (
     <div
       style={{ borderWidth: '1px', padding: '0 6px 0 12px' }}
