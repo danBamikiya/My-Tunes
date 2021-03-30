@@ -6,7 +6,7 @@ interface Message {
   content: string
 }
 
-interface SubscriptionPubSub {
+interface Subscription {
   pubsub: PubSub
 }
 
@@ -53,7 +53,7 @@ const resolvers = {
   },
   Subscription: {
     messages: {
-      subscribe: (parent: any, args: any, { pubsub }: SubscriptionPubSub) => {
+      subscribe: (parent: any, args: any, { pubsub }: Subscription) => {
         const channel = Math.random().toString(36).slice(2, 15) // random channel name
         onMessagesUpdates(() => pubsub.publish(channel, { messages }))
         setTimeout(() => pubsub.publish(channel, { messages }), 0)
