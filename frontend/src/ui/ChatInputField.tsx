@@ -1,5 +1,5 @@
 import React from 'react'
-import { handleEvent } from '../lib/handleKeyDown'
+import { handleEvent } from '../lib/handleEvent'
 import { SendBtnProps } from './SendButton'
 export interface ChatInputFieldProps {
   setMessage: (message: string) => void
