@@ -3,6 +3,8 @@ import { ChatInput } from '../components/ChatInput'
 import { Messages } from '../components/Messages'
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 
+import '../styles/Chat.css'
+
 const client = new ApolloClient({
   uri: 'http://localhost:4040',
   cache: new InMemoryCache()
