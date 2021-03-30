@@ -10,4 +10,5 @@ interface handleKeyDownProps {
 export const handleKeyDown: handleKeyDownProps = (event, payload) => {
   event.preventDefault()
   payload(event.currentTarget.value)
+  event.currentTarget.value = '' // Clear Fields
 }
