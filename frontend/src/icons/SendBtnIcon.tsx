@@ -7,6 +7,7 @@ export const SendIcon = () => {
       viewBox='0 0 512 512'
       width='16'
       height='16'
+      className='float-right mr-0.5 mb-0 ml-2'
     >
       <defs />
       <path
