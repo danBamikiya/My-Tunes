@@ -24,7 +24,7 @@ export default function Chat() {
     setState({ ...state, user: user })
   }
 
-  const sendMessage = (message: string) => {
+  const setMessage = (message: string) => {
     setState({ ...state, content: message })
   }
 
@@ -32,7 +32,11 @@ export default function Chat() {
     <ApolloProvider client={client}>
       <div className='container mx-auto p-6'>
         <Messages user={state.user} />
-        <ChatInput setCurrentUser={setCurrentUser} sendMsg={sendMessage} />
+        <ChatInput
+          setCurrentUser={setCurrentUser}
+          setMessage={setMessage}
+          state={state}
+        />
       </div>
     </ApolloProvider>
   )
