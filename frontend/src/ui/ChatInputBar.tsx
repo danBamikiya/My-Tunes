@@ -1,8 +1,20 @@
 import React from 'react'
 import { ChatInputField, ChatInputFieldProps } from './ChatInputField'
+import { SendBtnProps } from './SendButton'
 import { EmojiPicker } from './EmojiPicker'
 
-export const ChatInputBar: React.FC<ChatInputFieldProps> = ({ sendMsg }) => {
+interface ChatInputBarProps extends ChatInputFieldProps, SendBtnProps {
+  state: {
+    user: string
+    content: string
+  }
+}
+
+export const ChatInputBar: React.FC<ChatInputBarProps> = ({
+  setMessage,
+  sendMsg,
+  state
+}) => {
   return (
     <div
       style={{ borderWidth: '1px', padding: '0 6px 0 12px' }}
@@ -10,7 +22,7 @@ export const ChatInputBar: React.FC<ChatInputFieldProps> = ({ sendMsg }) => {
         'border-solid border-blue-light rounded text-sm flex flex-1 overflow-hidden justify-between mx-2 bg-blue-darkest'
       }
     >
-      <ChatInputField sendMsg={sendMsg} />
+      <ChatInputField setMessage={setMessage} sendMsg={sendMsg} state={state} />
       <EmojiPicker />
     </div>
   )
