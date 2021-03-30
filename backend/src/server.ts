@@ -10,7 +10,7 @@ interface SubscriptionPubSub {
   pubsub: PubSub
 }
 
-interface onMessagesUpdatesArgs {
+interface Subscriber {
   (): boolean
 }
 
@@ -36,8 +36,8 @@ const typeDefs = `
   }
 `
 
-const subscribers = []
-const onMessagesUpdates = (fn: onMessagesUpdatesArgs) => subscribers.push(fn)
+const subscribers: Subscriber[] = []
+const onMessagesUpdates = (fn: Subscriber) => subscribers.push(fn)
 
 const resolvers = {
   Query: {
