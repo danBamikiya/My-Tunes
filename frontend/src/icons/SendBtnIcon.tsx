@@ -5,8 +5,8 @@ export const SendIcon = () => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 512 512'
-      width='14'
-      height='14'
+      width='16'
+      height='16'
     >
       <defs />
       <path
