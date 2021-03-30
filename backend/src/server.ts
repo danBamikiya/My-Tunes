@@ -47,6 +47,7 @@ const resolvers = {
     postMessage: (parent: any, { user, content }: Message) => {
       const id = messages.length
       messages.push({ id, user, content })
+      subscribers.forEach(fn => fn())
       return id
     }
   },
