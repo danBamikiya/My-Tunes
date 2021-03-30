@@ -8,10 +8,6 @@ interface handleKeyDownProps {
 }
 
 export const handleKeyDown: handleKeyDownProps = (event, payload) => {
-  if (event.key === 'Enter') {
-    event.preventDefault()
-    console.log(event.currentTarget.value)
-
-    payload(event.currentTarget.value)
-  }
+  event.preventDefault()
+  payload(event.currentTarget.value)
 }
