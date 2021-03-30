@@ -4,7 +4,7 @@ import { useMutation, gql } from '@apollo/client'
 import { ChatInputBar } from '../ui/ChatInputBar'
 import { ChatInputFieldProps } from '../ui/ChatInputField'
 import { SendBtn } from '../ui/SendButton'
-import { handleEvent } from '../lib/handleKeyDown'
+import { handleEvent } from '../lib/handleEvent'
 
 interface State {
   state: {
