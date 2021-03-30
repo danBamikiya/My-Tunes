@@ -13,7 +13,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   sendMsg
 }) => {
   const handleKeyDownEvent = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    handleKeyDown(event, setCurrentUser)
+    if (event.key === 'Enter') {
+      handleKeyDown(event, setCurrentUser)
+    }
   }
 
   return (
