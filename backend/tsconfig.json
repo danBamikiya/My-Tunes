@@ -1,15 +1,15 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "module": "commonjs",
-      "rootDir": "./src",
-      "outDir": "./build",
-      "esModuleInterop": true,
-      "moduleResolution": "node",
-      "baseUrl": "./src",
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-    },
-    "lib": ["es2015"],
-    "compileOnSave": true
-  }
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "lib": ["es2015", "esnext.asynciterable"],
+  "compileOnSave": true
+}
