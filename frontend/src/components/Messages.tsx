@@ -26,7 +26,9 @@ const GET_MESSAGES = gql`
 `
 
 export const Messages = ({ user }: User) => {
-  const { loading, data } = useQuery<MessagesData>(GET_MESSAGES)
+  const { loading, data } = useQuery<MessagesData>(GET_MESSAGES, {
+    pollInterval: 500
+  })
 
   const userMessages = ({ id, user: messageUser, content }: MessagesProps) => (
     <ChatBubble key={id} user={user} content={content} sender={messageUser} />
