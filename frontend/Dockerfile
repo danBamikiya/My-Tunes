@@ -1,4 +1,4 @@
-FROM node:15.10.0 AS ui-build
+FROM node:15.10.0 AS ui-dev
 WORKDIR /app
 COPY [".", "./"]
 RUN npm i
