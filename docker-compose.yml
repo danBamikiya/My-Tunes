@@ -10,7 +10,7 @@ services:
     volumes:
       - ./frontend/:/app
       - frontendnodemodules:/app/node_modules
-    container_name: frontend-container
+    container_name: soundwave-frontend-container
 
   express:
     build:
@@ -20,7 +20,7 @@ services:
     volumes:
       - ./backend/:/app
       - backendnodemodules:/app/node_modules
-    container_name: backend-container
+    container_name: soundwave-backend-container
 
 volumes:
   backendnodemodules: {}
