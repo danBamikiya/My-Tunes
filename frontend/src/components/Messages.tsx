@@ -39,9 +39,9 @@ export const Messages = ({ user }: User) => {
       ) : (
         <>
           {data?.messages.map(userMessages) || (
-            <>
+            <div className='container mx-auto p-6'>
               <p>No message</p>
-            </>
+            </div>
           )}
         </>
       )}
