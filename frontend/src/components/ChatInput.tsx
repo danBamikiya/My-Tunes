@@ -1,20 +1,46 @@
 import React from 'react'
+import { useMutation, gql } from '@apollo/client'
+
 import { ChatInputBar } from '../ui/ChatInputBar'
 import { ChatInputFieldProps } from '../ui/ChatInputField'
 import { SendBtn } from '../ui/SendButton'
-import { handleKeyDown } from '../lib/handleKeyDown'
+import { handleEvent } from '../lib/handleKeyDown'
 
-interface ChatInputProps extends ChatInputFieldProps {
+interface State {
+  state: {
+    user: string
+    content: string
+  }
+}
+
+interface ChatInputProps extends State, ChatInputFieldProps {
   setCurrentUser: (user: string) => void
 }
 
+const POST_MESSAGE = gql`
+  mutation($user: String!, $content: String!) {
+    postMessage(user: $user, content: $content)
+  }
+`
+
 export const ChatInput: React.FC<ChatInputProps> = ({
   setCurrentUser,
-  sendMsg
+  setMessage,
+  state
 }) => {
+  const [postMessage] = useMutation(POST_MESSAGE)
+
+  const sendMsg = () => {
+    if (state.content.length > 0) {
+      postMessage({
+        variables: state
+      })
+    }
+  }
+
   const handleKeyDownEvent = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      handleKeyDown(event, setCurrentUser)
+      handleEvent(event.currentTarget.value, setCurrentUser)
     }
   }
 
@@ -28,8 +54,8 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         className='h-8 border-none bg-blue-darker text-primary rounded'
         onKeyDown={handleKeyDownEvent}
       />
-      <ChatInputBar sendMsg={sendMsg} />
-      <SendBtn />
+      <ChatInputBar setMessage={setMessage} sendMsg={sendMsg} state={state} />
+      <SendBtn sendMsg={sendMsg} />
     </div>
   )
 }
