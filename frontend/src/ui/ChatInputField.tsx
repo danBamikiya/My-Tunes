@@ -7,7 +7,9 @@ export interface ChatInputFieldProps {
 
 export const ChatInputField: React.FC<ChatInputFieldProps> = ({ sendMsg }) => {
   const handleKeyDownEvent = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    handleKeyDown(event, sendMsg)
+    if (event.key === 'Enter') {
+      handleKeyDown(event, sendMsg)
+    }
   }
 
   return (
