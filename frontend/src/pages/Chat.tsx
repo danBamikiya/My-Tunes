@@ -31,7 +31,7 @@ export default function Chat() {
   return (
     <ApolloProvider client={client}>
       <div className='container mx-auto p-6'>
-        <Messages user='Damian' />
+        <Messages user={state.user} />
         <ChatInput setCurrentUser={setCurrentUser} sendMsg={sendMessage} />
       </div>
     </ApolloProvider>
