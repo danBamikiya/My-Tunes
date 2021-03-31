@@ -1,5 +1,5 @@
 import React from 'react'
-import { useQuery, gql } from '@apollo/client'
+import { useSubscription, gql } from '@apollo/client'
 import { ChatBubble } from '../ui/ChatBubble'
 
 interface User {
@@ -16,7 +16,7 @@ interface MessagesData {
 }
 
 const GET_MESSAGES = gql`
-  query {
+  subscription {
     messages {
       id
       content
@@ -26,9 +26,7 @@ const GET_MESSAGES = gql`
 `
 
 export const Messages = ({ user }: User) => {
-  const { loading, data } = useQuery<MessagesData>(GET_MESSAGES, {
-    pollInterval: 500
-  })
+  const { loading, data } = useSubscription<MessagesData>(GET_MESSAGES)
 
   const userMessages = ({ id, user: messageUser, content }: MessagesProps) => (
     <ChatBubble key={id} user={user} content={content} sender={messageUser} />
