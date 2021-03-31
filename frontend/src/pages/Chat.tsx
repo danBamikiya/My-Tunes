@@ -7,7 +7,7 @@ import { WebSocketLink } from '@apollo/client/link/ws'
 import '../styles/Chat.css'
 
 const link = new WebSocketLink({
-  uri: 'ws://localhost:4050/',
+  uri: 'ws://localhost:4040/',
   options: {
     reconnect: true
   }
