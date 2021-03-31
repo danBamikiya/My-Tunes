@@ -2,10 +2,19 @@ import React, { useState, useEffect } from 'react'
 import { ChatInput } from '../components/ChatInput'
 import { Messages } from '../components/Messages'
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
+import { WebSocketLink } from '@apollo/client/link/ws'
 
 import '../styles/Chat.css'
 
+const link = new WebSocketLink({
+  uri: 'ws://localhost:4050/',
+  options: {
+    reconnect: true
+  }
+})
+
 const client = new ApolloClient({
+  link,
   uri: 'http://localhost:4040',
   cache: new InMemoryCache()
 })
