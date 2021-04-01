@@ -1,0 +1,8 @@
+services:
+  react:
+    image: danbamikiya/soundwave_react:latest
+    restart: always
+
+  express:
+    image: danbamikiya/soundwave_express:latest
+    restart: always
