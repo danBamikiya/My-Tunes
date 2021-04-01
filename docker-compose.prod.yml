@@ -2,9 +2,9 @@ version: "3"
 
 services:
   react:
-    image: danbamikiya/soundwave_react:latest
+    image: danbamikiya/soundwave_react:1.0
     restart: always
 
   express:
-    image: danbamikiya/soundwave_express:latest
+    image: danbamikiya/soundwave_express:1.0
     restart: always
