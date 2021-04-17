@@ -8,7 +8,9 @@ export const HomeNav = () => (
           style={{ textDecoration: 'none' }}
           href='/login'
           className='text-primary p-4 home-nav-link'
-        ></a>
+        >
+          Join
+        </a>
       </li>
     </ul>
   </nav>
