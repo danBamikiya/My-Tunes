@@ -4,10 +4,6 @@ main.home-global * {
   color: white;
 }
 
-main.home-global {
-  background-color: #2f303a;
-}
-
 /* End Global */
 
 /* Start Header */
@@ -19,7 +15,7 @@ a.home-nav-link:hover {
 /* End Header */
 
 .lady-image {
-  background: url(../images/landing-page-girl.png) no-repeat bottom left;
+  /* background: url(../images/landing-page-girl.png) no-repeat bottom left; */
   background-size: contain;
   flex-grow: 1;
   max-height: 70vh;
@@ -29,3 +25,46 @@ a.home-nav-link:hover {
 .btn:hover {
   background-color: #2190d8;
 }
+
+/* Start Home page circles */
+
+.home-page-circle-1 {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  background-color: rgba(188, 58, 128, 0.1);
+  bottom: 5vw;
+  left: 3vw;
+}
+
+.home-page-circle-2 {
+  position: absolute;
+  width: 22vw;
+  height: 22vw;
+  border-radius: 50%;
+  background-color: rgba(52, 87, 178, 0.1);
+  top: 10vh;
+  left: 35vw;
+}
+
+.home-page-circle-3 {
+  position: absolute;
+  overflow: hidden;
+  width: 45vw;
+  height: 45vw;
+  bottom: 0;
+  right: 0;
+}
+
+.home-page-circle-3::before {
+  content: '';
+  transform: translate(40%, 40%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgba(52, 87, 178, 0.1);
+}
+
+/* End Home page circles */
