@@ -1,13 +1,13 @@
 import React from 'react'
 
-export const HomeNav = () => (
+export const HeaderNav = () => (
   <nav>
     <ul className='flex list-none'>
       <li>
         <a
           style={{ textDecoration: 'none' }}
           href='/login'
-          className='p-4 home-nav-link'
+          className='p-4 nav-link'
         >
           Join
         </a>
