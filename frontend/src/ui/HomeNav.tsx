@@ -5,9 +5,9 @@ export const HomeNav = () => (
     <ul className='flex list-none'>
       <li>
         <a
-          style={{ textDecoration: 'none', color: 'inherit' }}
+          style={{ textDecoration: 'none' }}
           href='/login'
-          className='text-primary p-4 home-nav-link'
+          className='p-4 home-nav-link'
         >
           Join
         </a>
