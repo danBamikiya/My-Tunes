@@ -10,6 +10,7 @@ module.exports = {
       current: 'currentColor',
       blue: {
         light: '#8187a2',
+        btn: '#1762a7',
         DEFAULT: '#477eff',
         dark: '#576c99',
         darker: '#12172d',
