@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Layout } from '../layout/Layout'
 import { HomeMainSection } from '../components/HomeMainSection'
-import { MainHeader } from '../components/MainHeader'
+import { Header } from '../components/Header'
 
 import '../styles/Home.css'
 
@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <Layout pageClass={home.homeClass} pageStyle={home.homeStyle}>
-      <MainHeader />
+      <Header />
       <HomeMainSection />
     </Layout>
   )
