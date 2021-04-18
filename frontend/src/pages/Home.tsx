@@ -6,14 +6,11 @@ import { MainHeader } from '../components/MainHeader'
 
 export default function Home() {
   const home = {
-    homeClass: 'home-global px-10 flex-grow flex flex-col',
-    homeStyle: {
-      backgroundColor: '#2f303a'
-    }
+    homeClass: 'home-global px-10 flex-grow flex flex-col'
   }
 
   return (
-    <Layout pageClass={home.homeClass} pageStyle={home.homeStyle}>
+    <Layout pageClass={home.homeClass}>
       <MainHeader />
       <HomeMainSection />
     </Layout>
