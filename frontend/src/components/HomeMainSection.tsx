@@ -11,8 +11,8 @@ export const HomeMainSection = () => (
       <h1 style={{ fontSize: '3.5rem' }} className='font-medium mb-4 mt-0'>
         Feel The Music
       </h1>
-      <span style={{ fontSize: '1.4rem' }} className='font-medium'>
-        Share songs with friends with one click
+      <span style={{ fontSize: '1.4rem' }} className='font-medium mb-8'>
+        Share songs and playlists with friends with one click
       </span>
 
       <a
