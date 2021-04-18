@@ -1,6 +1,18 @@
+/* Start Global */
+
+main.home-global * {
+  color: white;
+}
+
+/* End Global */
+
+/* Start Header */
+
 a.home-nav-link:hover {
   color: #adadad;
 }
+
+/* End Header */
 
 .lady-image {
   background: url(../images/landing-page-girl.png) no-repeat bottom left;
