@@ -2,3 +2,8 @@ body {
   min-height: 100vh;
   font-size: 1.2rem;
 }
+
+/* Header nav link */
+a.nav-link:hover {
+  color: #adadad;
+}
