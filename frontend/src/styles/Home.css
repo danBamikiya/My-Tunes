@@ -4,6 +4,10 @@ main.home-global * {
   color: white;
 }
 
+main.home-global {
+  background-color: #2f303a;
+}
+
 /* End Global */
 
 /* Start Header */
