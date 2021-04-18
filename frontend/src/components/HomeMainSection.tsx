@@ -6,6 +6,7 @@ export const HomeMainSection = () => (
       <div className='lady-image'></div>
       {/* a div is being used for the image instead of the img tag so that it can be easily scaled and positioned */}
     </div>
+
     <div className='flex flex-col items-start m-4 self-center'>
       <h1 style={{ fontSize: '3.5rem' }} className='font-medium mb-4 mt-0'>
         Feel The Music
@@ -13,6 +14,7 @@ export const HomeMainSection = () => (
       <span style={{ fontSize: '1.4rem' }} className='font-medium'>
         Share songs with friends with one click
       </span>
+
       <a
         style={{ textDecoration: 'none' }}
         href='/login'
