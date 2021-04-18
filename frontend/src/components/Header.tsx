@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { BrandLogo } from '../ui/BrandLogo'
-import { HomeNav } from '../ui/HomeNav'
+import { HeaderNav } from '../ui/HeaderNav'
 
 export const Header = () => (
   <header
@@ -9,6 +9,6 @@ export const Header = () => (
     className='flex justify-between items-center'
   >
     <BrandLogo />
-    <HomeNav />
+    <HeaderNav />
   </header>
 )
