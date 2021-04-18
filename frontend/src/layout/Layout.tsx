@@ -2,7 +2,7 @@ import React from 'react'
 
 interface LayoutProps {
   children: React.ReactNode
-  pageClass: string
+  pageClass?: string
   pageStyle?: {
     backgroundColor: string
   }
