@@ -1,13 +1,21 @@
 import React from 'react'
 
+import { Layout } from '../layout/Layout'
 import { HomeMainSection } from '../components/HomeMainSection'
 import { MainHeader } from '../components/MainHeader'
 
 export default function Home() {
+  const home = {
+    homeClass: 'home-global px-10 flex-grow flex flex-col',
+    homeStyle: {
+      backgroundColor: '#2f303a'
+    }
+  }
+
   return (
-    <div className='container mx-auto px-10 flex-grow flex flex-col'>
+    <Layout pageClass={home.homeClass} pageStyle={home.homeStyle}>
       <MainHeader />
       <HomeMainSection />
-    </div>
+    </Layout>
   )
 }
