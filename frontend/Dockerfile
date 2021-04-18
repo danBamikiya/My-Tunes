@@ -1,6 +1,15 @@
-FROM node:15.10.0 AS ui-dev
+FROM node:14-slim AS ui-dev
+
 WORKDIR /app
-COPY [".", "./"]
-RUN npm i
+
+COPY ["./package*.json", "./"]
+
+RUN npm ci
+
+COPY [".", "."]
+
+USER node
+
 EXPOSE 4050
+
 CMD ["npm", "start"]
