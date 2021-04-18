@@ -18,6 +18,9 @@ export default function Home() {
     <Layout pageClass={home.homeClass} pageStyle={home.homeStyle}>
       <Header />
       <HomeMainSection />
+      <div className='home-page-circle-1'></div>
+      <div className='home-page-circle-2'></div>
+      <div className='home-page-circle-3'></div>
     </Layout>
   )
 }
