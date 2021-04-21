@@ -16,32 +16,40 @@ main.home-global * {
 
 .btn:hover {
   background-color: #2190d8;
+  transition: background-color ease-in 10ms;
 }
 
 /* Start Home page circles */
 
-.home-page-circle-1 {
+.home-page-circle-1,
+.home-page-circle-2,
+.home-page-circle-3 {
   position: absolute;
+}
+
+.home-page-circle-1,
+.home-page-circle-2,
+.home-page-circle-3::before {
+  border-radius: 50%;
+}
+
+.home-page-circle-1 {
   width: 20vw;
   height: 20vw;
-  border-radius: 50%;
   background-color: rgba(188, 58, 128, 0.1);
   bottom: 5vw;
   left: 3vw;
 }
 
 .home-page-circle-2 {
-  position: absolute;
   width: 22vw;
   height: 22vw;
-  border-radius: 50%;
   background-color: rgba(52, 87, 178, 0.1);
   top: 10vh;
   left: 35vw;
 }
 
 .home-page-circle-3 {
-  position: absolute;
   overflow: hidden;
   width: 45vw;
   height: 45vw;
@@ -55,7 +63,6 @@ main.home-global * {
   position: absolute;
   height: 100%;
   width: 100%;
-  border-radius: 50%;
   background-color: rgba(52, 87, 178, 0.1);
 }
 
