@@ -1,7 +1,10 @@
 import React from 'react'
 
 export const HomeMainSection = () => (
-  <section className='flex items-stretch justify-between flex-grow'>
+  <section
+    style={{ zIndex: 1 }}
+    className='flex items-stretch justify-between flex-grow'
+  >
     <div className='flex-col flex flex-grow items-stretch justify-end'>
       <div className='lady-image'></div>
       {/* a div is being used for the image instead of the img tag so that it can be easily scaled and positioned */}
@@ -16,9 +19,8 @@ export const HomeMainSection = () => (
       </span>
 
       <a
-        style={{ textDecoration: 'none' }}
         href='/login'
-        className='text-primary bg-blue-btn py-3 px-6 rounded-lg text-sm outline-none border-none cursor-pointer btn'
+        className='text-primary bg-blue-btn py-3 px-6 rounded-lg text-sm outline-none border-none no-underline cursor-pointer btn'
       >
         Join Now
       </a>
