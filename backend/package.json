@@ -1,7 +1,7 @@
 {
-  "name": "soundwave-backend",
+  "name": "soundchat-backend",
   "version": "1.0.0",
-  "description": "the backend/server code for soundwave - a music sharing chat app",
+  "description": "the backend/server code for soundchat - a music sharing chat app",
   "main": "build/server",
   "scripts": {
     "prestart": "tsc -p ./",
