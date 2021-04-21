@@ -1,5 +1,5 @@
 {
-  "name": "soundwave",
+  "name": "soundchat",
   "version": "1.0.0",
   "description": "a music sharing chat app",
   "main": "index.js",
@@ -11,14 +11,14 @@
   "husky": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/danBamikiya/soundwave.git"
+    "url": "https://github.com/danBamikiya/soundchat.git"
   },
   "author": "Dan Bamikiya",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danBamikiya/soundwave/issues"
+    "url": "https://github.com/danBamikiya/soundchat/issues"
   },
-  "homepage": "https://github.com/danBamikiya/soundwave#readme",
+  "homepage": "https://github.com/danBamikiya/soundchat#readme",
   "dependencies": {},
   "devDependencies": {
     "husky": "^5.1.3",
