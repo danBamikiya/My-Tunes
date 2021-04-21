@@ -1,7 +1,7 @@
 {
-  "name": "soundwave-frontend",
+  "name": "soundchat-frontend",
   "version": "1.0.0",
-  "description": "the frontend/client code for soundwave - a music sharing chat app",
+  "description": "the frontend/client code for soundchat - a music sharing chat app",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
