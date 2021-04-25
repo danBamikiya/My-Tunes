@@ -14,11 +14,6 @@ main.home-global * {
   max-width: 30vw;
 }
 
-.btn:hover {
-  background-color: #2190d8;
-  transition: background-color ease-in 10ms;
-}
-
 /* Start Home page circles */
 
 .home-page-circle-1,
