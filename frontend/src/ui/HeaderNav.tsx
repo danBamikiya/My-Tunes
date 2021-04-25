@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const HeaderNav = () => (
   <nav>
     <ul className='flex list-none'>
       <li>
-        <a href='/login' className='p-4 nav-link no-underline'>
+        <Link to='/login' className='p-4 nav-link no-underline'>
           Join
-        </a>
+        </Link>
       </li>
     </ul>
   </nav>
