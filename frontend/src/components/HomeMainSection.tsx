@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const HomeMainSection = () => (
   <section
@@ -18,12 +19,12 @@ export const HomeMainSection = () => (
         Share songs and playlists with friends with one click
       </span>
 
-      <a
-        href='/login'
+      <Link
+        to='/login'
         className='text-primary bg-blue-btn py-3 px-6 rounded-lg text-sm outline-none border-none no-underline cursor-pointer btn'
       >
         Join Now
-      </a>
+      </Link>
     </div>
   </section>
 )
