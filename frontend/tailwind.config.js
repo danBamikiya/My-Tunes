@@ -20,6 +20,9 @@ module.exports = {
         light: '#ff7ce5',
         DEFAULT: '#ff49db',
         dark: '#ff16d1'
+      },
+      purple: {
+        DEFAULT: '#8c3a80'
       }
     },
     textColor: {
