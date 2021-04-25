@@ -7,3 +7,9 @@ body {
 a.nav-link:hover {
   color: #adadad;
 }
+
+/* Global buttons */
+.btn:hover {
+  background-color: #2190d8;
+  transition: background-color ease-in 10ms;
+}
