@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface LayoutProps {
+type LayoutProps = {
   children: React.ReactNode
   pageClass?: string
   pageStyle?: {
