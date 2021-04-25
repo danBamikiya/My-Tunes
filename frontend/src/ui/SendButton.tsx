@@ -1,7 +1,7 @@
 import React from 'react'
 import { SendIcon } from '../icons/SendBtnIcon'
 
-export interface SendBtnProps {
+export type SendBtnProps = {
   sendMsg: () => void
 }
 
