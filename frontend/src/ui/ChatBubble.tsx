@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface ChatBubbleProps {
+type ChatBubbleProps = {
   user: string
   sender: string
   content: string
