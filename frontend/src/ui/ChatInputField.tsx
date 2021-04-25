@@ -1,11 +1,11 @@
 import React from 'react'
 import { handleEvent } from '../lib/handleEvent'
 import { SendBtnProps } from './SendButton'
-export interface ChatInputFieldProps {
+export type ChatInputFieldProps = {
   setMessage: (message: string) => void
 }
 
-interface State {
+type State = {
   state: {
     user: string
     content: string
