@@ -5,3 +5,16 @@ main.login-global * {
 }
 
 /* End Global */
+
+/* Start Login Form */
+
+.login-form-input {
+  border-color: #2e3852;
+  border-radius: 5px;
+}
+
+.login-form-input:focus {
+  border-color: #596da0;
+}
+
+/* End Login Form */
