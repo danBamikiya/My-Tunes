@@ -27,7 +27,8 @@ module.exports = {
     },
     textColor: {
       primary: '#ffffff',
-      secondary: '#ffffff99'
+      secondary: '#ffffff99',
+      info: '#8c3a80'
     },
     extend: {
       maxWidth: {
