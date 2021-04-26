@@ -32,7 +32,7 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        'max-w-screen-2xl': '1800px'
+        'screen-2xl': '1800px'
       }
     },
     fontFamily: {
