@@ -33,6 +33,20 @@ module.exports = {
       maxWidth: {
         'max-w-screen-2xl': '1800px'
       }
+    },
+    fontFamily: {
+      poppins: [
+        'Poppins',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif'
+      ]
     }
   },
   variants: {
