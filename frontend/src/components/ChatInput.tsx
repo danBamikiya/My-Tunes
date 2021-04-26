@@ -6,16 +6,17 @@ import { ChatInputFieldProps } from '../ui/ChatInputField'
 import { SendBtn } from '../ui/SendButton'
 import { handleEvent } from '../lib/handleEvent'
 
-interface State {
+type State = {
   state: {
     user: string
     content: string
   }
 }
 
-interface ChatInputProps extends State, ChatInputFieldProps {
-  setCurrentUser: (user: string) => void
-}
+type ChatInputProps = State &
+  ChatInputFieldProps & {
+    setCurrentUser: (user: string) => void
+  }
 
 const POST_MESSAGE = gql`
   mutation($user: String!, $content: String!) {
