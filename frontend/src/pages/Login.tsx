@@ -16,6 +16,9 @@ export default function Login() {
   return (
     <Layout pageClass={login.loginClass} pageStyle={login.loginStyle}>
       <Header />
+
+      <div className='login-page-circle-1'></div>
+      <div className='login-page-circle-2'></div>
     </Layout>
   )
 }
