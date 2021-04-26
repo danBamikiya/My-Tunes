@@ -36,7 +36,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      poppins: [
+      sans: [
         'Poppins',
         'ui-sans-serif',
         'system-ui',
@@ -46,7 +46,11 @@ module.exports = {
         'Roboto',
         '"Helvetica Neue"',
         'Arial',
-        'sans-serif'
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"'
       ]
     }
   },
