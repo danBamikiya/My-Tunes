@@ -3,12 +3,13 @@ import { ChatInputField, ChatInputFieldProps } from './ChatInputField'
 import { SendBtnProps } from './SendButton'
 import { EmojiPicker } from './EmojiPicker'
 
-interface ChatInputBarProps extends ChatInputFieldProps, SendBtnProps {
-  state: {
-    user: string
-    content: string
+type ChatInputBarProps = ChatInputFieldProps &
+  SendBtnProps & {
+    state: {
+      user: string
+      content: string
+    }
   }
-}
 
 export const ChatInputBar: React.FC<ChatInputBarProps> = ({
   setMessage,
