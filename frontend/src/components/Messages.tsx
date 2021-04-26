@@ -2,16 +2,16 @@ import React from 'react'
 import { useSubscription, gql } from '@apollo/client'
 import { ChatBubble } from '../ui/ChatBubble'
 
-interface User {
+type User = {
   user: string
 }
 
-interface MessagesProps extends User {
+type MessagesProps = User & {
   id: number
   content: string
 }
 
-interface MessagesData {
+type MessagesData = {
   messages: MessagesProps[]
 }
 
