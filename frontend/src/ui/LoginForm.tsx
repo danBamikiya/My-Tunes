@@ -10,7 +10,7 @@ export const LoginForm = () => (
       maxWidth: '50%',
       borderRadius: '20px'
     }}
-    className='px-8 py-16'
+    className='py-8 px-16'
   >
     <div className='mb-8 flex flex-col'>
       <label className='font-bold mb-2'>Name:</label>
