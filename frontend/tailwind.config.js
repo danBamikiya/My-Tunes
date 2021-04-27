@@ -30,7 +30,17 @@ module.exports = {
       secondary: '#ffffff99',
       info: '#8c3a80'
     },
+    screens: {
+      sm: '600px',
+      md: '768px',
+      lg: '900px',
+      '1xl': '1200px',
+      '2xl': '1500px'
+    },
     extend: {
+      screens: {
+        '3xl': '1800px'
+      },
       maxWidth: {
         'screen-2xl': '1800px'
       }
