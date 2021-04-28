@@ -2,10 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const HomeMainSection = () => (
-  <section
-    style={{ zIndex: 1 }}
-    className='flex items-stretch justify-between flex-grow'
-  >
+  <section className='flex items-stretch justify-between flex-grow z-10'>
     <div className='flex-col flex flex-grow items-stretch justify-end'>
       <div className='lady-image'></div>
       {/* a div is being used for the image instead of the img tag so that it can be easily scaled and positioned */}
