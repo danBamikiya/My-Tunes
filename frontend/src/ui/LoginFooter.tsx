@@ -7,29 +7,45 @@ import { FacebookIcon } from '../icons/FacebookIcon'
 export const LoginFooter = () => (
   <footer
     style={{ height: '70px', backgroundColor: '#202027' }}
-    className='flex justify-between items-center font-bold'
+    className='flex justify-between items-center font-bold z-10'
   >
-    <div className='flex justify-between max-w-screen-2xl my-0 mx-auto flex-grow'>
+    <div className='container flex justify-between mx-auto flex-grow w-full px-10'>
       <nav>
         <ul className='flex'>
           <li>
-            <Link to='#'>About us</Link>
+            <Link
+              to='#'
+              className='flex items-center justify-between p-4 nav-link no-underline text-primary'
+            >
+              About us
+            </Link>
           </li>
           <li>
-            <Link to='#'>Contact</Link>
+            <Link
+              to='#'
+              className='flex items-center justify-between p-4 nav-link no-underline text-primary'
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
       <nav>
         <ul className='flex'>
           <li>
-            <Link to='#'>
-              <TwitterIcon /> Twitter
+            <Link
+              to='#'
+              className='flex justify-between p-4 nav-link no-underline text-primary'
+            >
+              <TwitterIcon classnames='inline mr-1' /> Twitter
             </Link>
           </li>
           <li>
-            <Link to='#'>
-              <FacebookIcon /> Facebook
+            <Link
+              to='#'
+              className='flex items-center justify-between p-4 nav-link no-underline text-primary'
+            >
+              <FacebookIcon classnames='inline mr-1' /> Facebook
             </Link>
           </li>
         </ul>
