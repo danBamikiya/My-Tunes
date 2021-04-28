@@ -1,12 +1,17 @@
 import React from 'react'
 
-export const FacebookIcon = () => (
+type FacebookIconProps = React.SVGProps<SVGSVGElement> & {
+  classnames?: string
+}
+
+export const FacebookIcon: React.FC<FacebookIconProps> = ({ classnames }) => (
   <svg
     width='24'
     height='22'
     viewBox='0 0 24 22'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
+    className={classnames}
   >
     <g clipPath='url(#clip0)'>
       <path
