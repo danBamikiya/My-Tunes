@@ -7,15 +7,8 @@ import { LoginMainSection } from '../components/LoginMainSection'
 import '../styles/Login.css'
 
 export default function Login() {
-  const login = {
-    loginClass: 'login-global px-10 flex-grow flex flex-col',
-    loginStyle: {
-      backgroundColor: '#2f303a'
-    }
-  }
-
   return (
-    <Layout pageClass={login.loginClass} pageStyle={login.loginStyle}>
+    <Layout>
       <Header />
       <LoginMainSection />
 
