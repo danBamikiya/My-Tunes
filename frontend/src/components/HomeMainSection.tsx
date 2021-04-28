@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const HomeMainSection = () => (
-  <section className='flex items-stretch justify-between flex-grow z-10'>
+  <section className='flex items-stretch justify-between flex-grow z-10 text-primary'>
     <div className='flex-col flex flex-grow items-stretch justify-end'>
       <div className='lady-image'></div>
       {/* a div is being used for the image instead of the img tag so that it can be easily scaled and positioned */}
@@ -18,7 +18,7 @@ export const HomeMainSection = () => (
 
       <Link
         to='/login'
-        className='text-primary bg-blue-btn py-3 px-6 rounded-lg text-sm outline-none border-none no-underline cursor-pointer btn'
+        className='bg-blue-btn py-3 px-6 rounded-lg text-sm outline-none border-none no-underline cursor-pointer btn'
       >
         Join Now
       </Link>

@@ -6,7 +6,7 @@ import { HeaderNav } from '../ui/HeaderNav'
 export const Header = () => (
   <header
     style={{ height: '140px' }}
-    className='flex justify-between items-center z-10'
+    className='flex justify-between items-center z-10  text-primary'
   >
     <BrandLogo />
     <HeaderNav />
