@@ -1,11 +1,3 @@
-/* Start Global */
-
-main.home-global * {
-  color: white;
-}
-
-/* End Global */
-
 .lady-image {
   /* background: url(../images/landing-page-girl.png) no-repeat bottom left; */
   background-size: contain;
