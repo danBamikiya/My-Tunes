@@ -1,5 +1,5 @@
 .lady-image {
-  /* background: url(../images/landing-page-girl.png) no-repeat bottom left; */
+  background: url(../images/soundchat.png) no-repeat center left;
   background-size: contain;
   flex-grow: 1;
   max-height: 70vh;
