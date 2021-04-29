@@ -4,6 +4,6 @@
   </a>
 </p>
 
-# My-Tunes
+<h1 align="center" >Soundchat</h1>
 
-A chat app
+<p align="center"> A chat app for sharing music playlists</p>
