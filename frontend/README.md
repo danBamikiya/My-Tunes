@@ -1,2 +1,2 @@
-# My-Tunes
+# Soundchat frontend
 A chat app
