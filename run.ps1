@@ -1,5 +1,4 @@
 # Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
-# & {. .\run.ps1; _Start }
 function Start-Services {
     Write-Host "Starting soundchat development services...`n" -f blue
     docker-compose up -d
@@ -12,7 +11,7 @@ function Stop-Services {
 }
 
 function Teardown-Services {
-    Write-Host "Tearing down all soundchat services (containers, networks, volumes)`n" -f yellow
+    Write-Host "Tearing down all soundchat services (containers, networks, volumes)...`n" -f yellow
     docker-compose down -v
 }
 
@@ -21,7 +20,7 @@ function Stop-Container {
         [switch]$RM = $false
     )
 
-    if (-Not $Args[0]) {
+    if ($Args[0].Length -eq 1) {
         Write-Host "Specify the container name." -f yellow
     } else {
         Write-Host "Stopping $($Args[0]) service...`n" -f yellow
@@ -34,7 +33,7 @@ function Stop-Container {
 }
 
 function Rebuild-Image {
-    if (-Not $Args[0]) {
+    if ($Args[0].Length -eq 1) {
         Write-Host "Specify the container name." -f yellow
     } else {
         Write-Host "Rebuilding $($Args[0]) service...`n" -f blue
@@ -58,31 +57,31 @@ function Build-Services {
 switch ($Args[0]) {
     'LS' {
         List-Services;
-        exit
+        break
     }
     'Start' {
         Start-Services;
-        exit
+        break
     }
     'Stop' {
         Stop-Services;
-        exit
+        break
     }
     'Teardown' {
         Teardown-Services;
-        exit
+        break
     }
     'Stop-Container' {
         Stop-Container $Args[1..($Args.Length -1)];
-        exit
+        break
     }
     'Rebuild-Image' {
         Rebuild-Image $Args[1..($Args.Length -1)];
-        exit
+        break
     }
     'Build' {
         Build-Services;
-        exit
+        break
     }
     Default {
         if ($Args[0]) {
