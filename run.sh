@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 RED="\033[0;31m"
 CYAN="\033[0;36m"
@@ -6,23 +6,23 @@ BBLUE="\033[1;34m"
 BYELLOW="\033[1;33m"
 NC="\033[0m" #NO COLOR
 
-start() {
+start_services() {
     printf "${BBLUE}Starting soundchat development services...${NC}\n\n"
     docker-compose up -d
     docker-compose logs -f
 }
 
-stop() {
+stop_services() {
     printf "${BYELLOW}Stopping soundchat services...${NC}\n\n"
     docker-compose stop
 }
 
-teardown() {
-    printf "${BYELLOW}Tearing down all soundchat services (containers, networks, volumes)${NC}\n\n"
+teardown_services() {
+    printf "${BYELLOW}Tearing down all soundchat services (containers, networks, volumes)...${NC}\n\n"
     docker-compose down -v
 }
 
-stop-container() {
+stop_container() {
     if [[ -z "$1" ]]; then
         printf "${BYELLOW}Specify the container name.${NC}"
     else
@@ -35,7 +35,7 @@ stop-container() {
     fi
 }
 
-rebuild-image() {
+rebuild_image() {
     if [[ -z "$1" ]]; then
         printf "${BYELLOW}Specify the container name.${NC}"
     else
@@ -45,12 +45,12 @@ rebuild-image() {
     fi
 }
 
-ls() {
+list_services() {
     printf "${BBLUE}Listing all services...${NC}\n\n"
     docker-compose ps -a
 }
 
-build() {
+build_services() {
     printf "${BBLUE}Creating soundchat production services...${NC}\n\n"
     docker-compose build
     docker-compose up -f docker-compose.yml docker-compose.prod.yml -d
@@ -59,32 +59,25 @@ build() {
 
 case $1 in
 ls)
-    ls
-    exit
+    list_services
     ;;
 start)
-    start
-    exit
+    start_services
     ;;
 stop)
-    stop
-    exit
+    stop_services
     ;;
 teardown)
-    teardown
-    exit
+    teardown_services
     ;;
-stop-container)
+stop_container)
     "$@"
-    exit
     ;;
-rebuild-image)
+rebuild_image)
     "$@"
-    exit
     ;;
 build)
-    build
-    exit
+    build_services
     ;;
 *)
     if [[ ! -z "$1" ]]; then
