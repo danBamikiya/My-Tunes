@@ -1,3 +1,6 @@
+# Since we rely on paths relative to the makefile location, abort if make isn't being run from there.
+$(if $(findstring /,$(MAKEFILE_LIST)),$(error Please only invoke this makefile from the directory it resides in))
+
 LOGFILE=$(shell date +'%y-%m-%d-%H:%M:%S')
 RM?=
 DIR?=
