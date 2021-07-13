@@ -60,24 +60,31 @@ build_services() {
 case $1 in
 ls)
     list_services
+    exit
     ;;
 start)
     start_services
+    exit
     ;;
 stop)
     stop_services
+    exit
     ;;
 teardown)
     teardown_services
+    exit
     ;;
 stop_container)
     "$@"
+    exit
     ;;
 rebuild_image)
     "$@"
+    exit
     ;;
 build)
     build_services
+    exit
     ;;
 *)
     if [[ ! -z "$1" ]]; then
