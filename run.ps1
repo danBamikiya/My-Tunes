@@ -57,31 +57,31 @@ function Build-Services {
 switch ($Args[0]) {
     'LS' {
         List-Services;
-        break
+        exit
     }
     'Start' {
         Start-Services;
-        break
+        exit
     }
     'Stop' {
         Stop-Services;
-        break
+        exit
     }
     'Teardown' {
         Teardown-Services;
-        break
+        exit
     }
     'Stop-Container' {
         Stop-Container $Args[1..($Args.Length -1)];
-        break
+        exit
     }
     'Rebuild-Image' {
         Rebuild-Image $Args[1..($Args.Length -1)];
-        break
+        exit
     }
     'Build' {
         Build-Services;
-        break
+        exit
     }
     Default {
         if ($Args[0]) {
