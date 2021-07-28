@@ -19,8 +19,7 @@ function Stop-Container {
     param(
         [switch]$RM = $false
     )
-
-    if ($Args[0].Length -eq 1) {
+    if (-Not $Args[0]) {
         Write-Host "Specify the container name." -f yellow
     } else {
         Write-Host "Stopping $($Args[0]) service...`n" -f yellow
@@ -33,7 +32,7 @@ function Stop-Container {
 }
 
 function Rebuild-Image {
-    if ($Args[0].Length -eq 1) {
+    if (-Not $Args[0]) {
         Write-Host "Specify the container name." -f yellow
     } else {
         Write-Host "Rebuilding $($Args[0]) service...`n" -f blue
@@ -72,11 +71,11 @@ switch ($Args[0]) {
         exit
     }
     'Stop-Container' {
-        Stop-Container $Args[1..($Args.Length -1)];
+        Invoke-Expression "$($Args)"
         exit
     }
     'Rebuild-Image' {
-        Rebuild-Image $Args[1..($Args.Length -1)];
+        Rebuild-Image $($Args | Select-Object -Skip 1);
         exit
     }
     'Build' {
